@@ -14,6 +14,11 @@ int main()
     scanf("%d", &n);
     // Getting the memory block.
     ptr = (int *)calloc(n, sizeof(int));
+    if (ptr == NULL)
+    {
+        printf("Memory not allocated.\n");
+        exit(0);
+    }
     // Taking numbers as input and adding them.
     for (int i = 0; i < n; i++)
     {
